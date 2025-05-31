@@ -20,8 +20,13 @@ from django.conf import settings
 
 
 urlpatterns = [
+    #paths del core
+    # Aquí se incluyen las URLs de la aplicación principal del proyecto
     path('', include('core.urls')),
-    #paths del admin
+    #paths del servicios
+    # Aquí se incluyen las URLs de la aplicación de servicios
+    path('services/', include('services.urls')),
+      #paths del admin
     path('admin/', admin.site.urls),
 ]
 
