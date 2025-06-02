@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog', # Aplicación de blog, para manejar entradas y categorías
     'core', # Aplicación principal del proyecto, para activar la aplicación core
     'services.apps.ServicesConfig', # Aplicación de servicios
 ]
