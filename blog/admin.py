@@ -8,6 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class PostAdmin(admin.ModelAdmin):
     readonly_fields =('created', 'updated')
+    list_display = ('title', 'author', 'published')
 
 admin.site.register(category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
