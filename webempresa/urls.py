@@ -26,6 +26,8 @@ urlpatterns = [
     #paths del servicios
     # Aquí se incluyen las URLs de la aplicación de servicios
     path('services/', include('services.urls')),
+    # Aquí se incluyen las URLs de la aplicación de blog
+    path('blog/', include('blog.urls')),
       #paths del admin
     path('admin/', admin.site.urls),
 ]
