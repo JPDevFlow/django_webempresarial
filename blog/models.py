@@ -20,7 +20,7 @@ class Post(models.Model):
     published = models.DateTimeField(verbose_name="Fecha de publicación", default=now)
     image = models.ImageField(verbose_name="Imagen", upload_to='blog', blank=True, null=True)
     author = models.ForeignKey(User, verbose_name="Autor", on_delete=models.CASCADE)#El models.CASCADE significa que si se elimina el usuario, se eliminarán también sus entradas
-    categories =models.ManyToManyField(category, verbose_name="Categorías") # ManyToManyField permite que una entrada tenga varias categorías y una categoría tenga varias entradas
+    categories =models.ManyToManyField(category, verbose_name="Categorías", related_name="get_posts") # ManyToManyField permite que una entrada tenga varias categorías y una categoría tenga varias entradas
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")
 
