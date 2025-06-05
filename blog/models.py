@@ -3,7 +3,7 @@ from django.utils.timezone import now
 from django.contrib.auth.models import User# este es el modelo de usuario por defecto de Django
 
 # Create your models here.
-class category(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Nombre")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")
@@ -20,7 +20,7 @@ class Post(models.Model):
     published = models.DateTimeField(verbose_name="Fecha de publicación", default=now)
     image = models.ImageField(verbose_name="Imagen", upload_to='blog', blank=True, null=True)
     author = models.ForeignKey(User, verbose_name="Autor", on_delete=models.CASCADE)#El models.CASCADE significa que si se elimina el usuario, se eliminarán también sus entradas
-    categories =models.ManyToManyField(category, verbose_name="Categorías", related_name="get_posts") # ManyToManyField permite que una entrada tenga varias categorías y una categoría tenga varias entradas
+    categories =models.ManyToManyField(Category, verbose_name="Categorías", related_name="get_posts") # ManyToManyField permite que una entrada tenga varias categorías y una categoría tenga varias entradas
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")
 

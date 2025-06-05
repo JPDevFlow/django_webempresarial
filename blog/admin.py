@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import category, Post
+from .models import Category, Post
 # Register your models here.
 
 
@@ -18,5 +18,5 @@ class PostAdmin(admin.ModelAdmin):
         return ", ".join([c.name for c in obj.categories.all().order_by('name')])  # Muestra las categorías de la entrada separadas por comas
     post_categories.short_description = 'Categorías'  # Título de la columna en el admin
 
-admin.site.register(category, CategoryAdmin)
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
