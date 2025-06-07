@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog', # Aplicación de blog, para manejar entradas y categorías
     'core', # Aplicación principal del proyecto, para activar la aplicación core
     'services.apps.ServicesConfig', # Aplicación de servicios
+    'social.apps.SocialConfig', # Aplicación de redes sociales
 ]
 
 MIDDLEWARE = [
