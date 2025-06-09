@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog', # Aplicación de blog, para manejar entradas y categorías
     'ckeditor', # Aplicación de CKEditor, para editar contenido enriquecido
+    'contact', # Aplicación de contacto, para manejar formularios de contacto
     'core', # Aplicación principal del proyecto, para activar la aplicación core
     'pages.apps.PagesConfig', # Aplicación de páginas, para manejar páginas estáticas
     'services.apps.ServicesConfig', # Aplicación de servicios
